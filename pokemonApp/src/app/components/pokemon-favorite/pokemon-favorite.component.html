@@ -1,0 +1,7 @@
+<div *ngIf="(favorite$ | async) as favorite; else noFavorite">
+    <p>Tu Pokémon favorito es: {{ favorite | capitalize }}</p>
+</div>
+
+<ng-template #noFavorite>
+    <p>No has seleccionado un Pokémon favorito.</p>
+</ng-template>

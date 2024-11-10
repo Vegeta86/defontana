@@ -1,0 +1,17 @@
+<header class="header">
+  <img src="../assets/img/Pokemon_logo.svg" alt="">
+  <div class="favorite-pokemon-container">
+    <app-favorite></app-favorite>
+  </div>
+</header>
+
+<div class="content">
+  <app-pokemon-table (selectedPokemon)="onSelectPokemon($event)"></app-pokemon-table>
+  <app-pokemon-detail [pokemonName]="selectedPokemon"></app-pokemon-detail>
+</div>
+
+<div class="summary">
+  <app-pokemon-summary></app-pokemon-summary>
+</div>
+
+<router-outlet></router-outlet>

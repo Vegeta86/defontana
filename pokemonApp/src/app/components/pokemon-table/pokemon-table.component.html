@@ -1,0 +1,34 @@
+<mat-card class="search-cont">
+    <mat-card-content>
+        <h1>Buscador</h1>
+
+        <form class="pokemon-search-cont">
+            <mat-form-field class="full-width">
+                <mat-label>Buscar Pokemon</mat-label>
+                <input matInput placeholder="Ej: Charizard" [formControl]="searchControl">
+            </mat-form-field>
+        </form>
+    </mat-card-content>
+</mat-card>   
+
+<mat-card>
+    <mat-card-content>
+        <h1>Lista de pokemones</h1>
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="dataLoaded">
+            <ng-container matColumnDef="pokemon-name">
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                <td mat-cell *matCellDef="let pokemon">
+                    <button mat-button (click)="onSelectPokemon(pokemon.name)">{{ pokemon.name | capitalize }}</button>
+                    <button mat-fab (click)="markAsFavorite(pokemon.name)">
+                        <mat-icon>star</mat-icon>
+                    </button>
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [length]="paginatorLength" [pageSize]="10" (page)="onPageChange($event)">
+        </mat-paginator>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,18 @@
+<mat-card appearance="outlined">
+  <mat-card-content *ngIf="pokemonDetails">
+    <h1>Detalle</h1>
+
+    <div class="details">
+      <h2>{{ pokemonDetails.name | capitalize }}</h2>
+      <img class="pokemon-img" [src]="pokemonDetails.sprites.front_default" alt="{{ pokemonDetails.name }}" />
+      <p>Alto: {{ pokemonDetails.height }}</p>
+      <p>Peso: {{ pokemonDetails.weight }}</p>
+      <h3>Habilidades</h3>
+      <ul>
+        <li *ngFor="let ability of pokemonDetails.abilities">
+          {{ ability.ability.name }}
+        </li>
+      </ul>
+    </div>
+  </mat-card-content>
+</mat-card>

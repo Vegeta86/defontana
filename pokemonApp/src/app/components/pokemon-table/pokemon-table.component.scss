@@ -1,0 +1,39 @@
+.mat-card{
+    width: 600px;
+}
+
+.mat-form-field {
+    width: 100%;
+}
+
+.mat-table{
+    width: 100%;
+}
+
+.mat-column-pokemon-name{
+    display: flex;
+    height: 48px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+
+
+.mat-fab{
+    display: flex;
+    height: 32px;
+    width: 32px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-cont{
+    margin-bottom: 2%;
+}
