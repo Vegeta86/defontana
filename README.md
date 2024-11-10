@@ -1,6 +1,6 @@
 # 🐱‍👤 Pokémon Angular Application
 
-Esta aplicación es sirve para gestionar y visualizar datos de Pokémon, incluyendo la funcionalidad de marcar un Pokémon como favorito. Se ha construido utilizando diversas técnicas y patrones de Angular, tales como NgRx para el manejo del estado, pipes personalizados, suscripciones, y más.
+Esta aplicación  sirve para gestionar y visualizar datos de Pokémon, incluyendo la funcionalidad de marcar un Pokémon como favorito. Se ha construido utilizando diversas técnicas y patrones de Angular, tales como NgRx para el manejo del estado, pipes personalizados, suscripciones, y más.
 
 ## ✨ Características Principales
 
